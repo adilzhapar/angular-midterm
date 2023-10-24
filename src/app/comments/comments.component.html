@@ -1,1 +1,46 @@
-<p>comments works!</p>
+<div class="w-full flex justify-center mt-10">
+  <div>
+    <div class="flex flex-col items-center gap-y-5 max-w-[360px] lg:max-w-[1200px]">
+      <div class="card flex flex-col items-center gap-y-3">
+        <h1 class="font-semibold text-2xl text-center mb-2">Fill the comment and character_id</h1>
+        <form
+                  #f="ngForm"
+                  (ngSubmit)="handleAdd(f)"
+                  class="flex gap-x-2 p-2 w-fit"
+              >
+                  <input
+                      class="text-center border border-[#ffffff40] rounded-md p-2 w-fit"
+                      type="text"
+                      ngModel
+                      placeholder="leave comment here"
+                      name="comment"
+                  />
+                  <input
+                      class="text-center border border-[#ffffff40] rounded-md p-2 w-fit"
+                      type="text"
+                      ngModel
+                      placeholder="place id here"
+                      name="character_id"
+                  />
+                  <button
+                      class="text-center bg-white text-black rounded-full"
+                      type="submit"
+                  >
+                      <i class="mdi mdi-content-save text-lg text-black"></i>
+                  </button>
+              </form>
+      </div>
+      <ng-container *ngIf="comments !== null && comments.length > 0; else noComments">
+        <div class="flex flex-col">
+          <div *ngFor="let item of comments; let i = index"
+            class="flex flex-col items-start border border-[#333] rounded p-4 mb-4 gap-2">
+            <p>{{item.content}}</p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noComments>
+        <p>No saved comments available.</p>
+      </ng-template>
+    </div>  
+  </div>
+</div>

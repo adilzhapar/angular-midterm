@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentsComponent } from './comments/comments.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { CommentsComponent } from './comments/comments.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
