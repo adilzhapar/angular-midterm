@@ -8,6 +8,7 @@ import { FeedComponent } from './feed/feed.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FeedComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
