@@ -19,5 +19,6 @@ export class CommentsComponent implements OnInit{
   
   async handleAdd(f: NgForm){
     await this.supabase.addComment(f.value.comment, f.value.character_id);
+    this.comments = await this.supabase.getComments();
   }
 }

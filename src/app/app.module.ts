@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentsComponent } from './comments/comments.component';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     FeedComponent,
     AboutComponent,
     HeaderComponent,
-    CommentsComponent
+    CommentsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
