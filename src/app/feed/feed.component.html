@@ -1,11 +1,13 @@
-<div *ngFor="let character of characters">
-  <div class="character">
-    <img [src]="character.image" alt="{{ character.name }}" />
-    <h3>{{ character.name }}</h3>
-    <p>Status: {{ character.status }}</p>
-    <p>Species: {{ character.species }}</p>
-    <p>Gender: {{ character.gender }}</p>
-    <p>Origin: {{ character.origin.name }}</p>
-    <p>Location: {{ character.location.name }}</p>
+<div class="w-full grid grid-cols-5 px-20 gap-10 mb-20">
+  <div *ngFor="let character of characters" class="">
+    <div class="character">
+      <img [src]="character.image" alt="{{ character.name }}" />
+      <h3>{{ character.name }}</h3>
+      <p>Status: {{ character.status }}</p>
+      <p>Species: {{ character.species }}</p>
+      <p>Gender: {{ character.gender }}</p>
+      <p>Origin: {{ character.origin.name }}</p>
+      <p>Location: {{ character.location.name }}</p>
+    </div>
   </div>
 </div>
